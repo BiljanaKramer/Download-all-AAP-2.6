@@ -1,0 +1,14 @@
+---
+- name: Download AAP setup bundle
+  hosts: localhost
+  gather_facts: false
+
+  vars:
+    aap_setup_down_dest_dir: "/tmp/aap_download"
+    aap_setup_down_offline_token: "c28e9d1f9feae0c5aa0d66db08d27805310a6269"
+    aap_setup_down_type: "aap"
+    aap_setup_down_version: "2.6"
+    aap_setup_down_arch: "x86_64"
+
+  roles:
+    - role: infra.aap_utilities.aap_setup_download
